@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacidade e Suporte - Gestão Peixaria</title>
+    <title>Gestão de Peixaria - Informações e Suporte</title>
     <style>
         :root {
             --primary-color: #0284c7;
@@ -43,6 +43,7 @@
         .tabs {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
             gap: 10px;
             margin-bottom: 30px;
             border-bottom: 2px solid #e2e8f0;
@@ -52,8 +53,8 @@
         .tab-btn {
             background-color: #e2e8f0;
             border: none;
-            padding: 12px 24px;
-            font-size: 1rem;
+            padding: 10px 18px;
+            font-size: 0.95rem;
             font-weight: 600;
             color: #475569;
             cursor: pointer;
@@ -146,27 +147,30 @@
 
         <!-- Botões de Navegação (Abas) -->
         <div class="tabs">
-            <button class="tab-btn active" onclick="openTab(event, 'privacidade')">Política de Privacidade</button>
+            <button class="tab-btn active" onclick="openTab(event, 'sobre')">Sobre o App</button>
+            <button class="tab-btn" onclick="openTab(event, 'privacidade')">Política de Privacidade</button>
             <button class="tab-btn" onclick="openTab(event, 'exclusao')">Exclusão de Dados</button>
         </div>
 
-        <!-- Conteúdo da Aba: Política de Privacidade -->
-        <div id="privacidade" class="tab-content active">
-            <h2>Sobre o Aplicativo</h2>
+        <!-- Conteúdo da Aba: Sobre o App -->
+        <div id="sobre" class="tab-content active">
+            <h2>Visão Geral</h2>
             <p><strong>Gestão prática para peixarias e negócios locais com controle de vendas, clientes, fiados e estoque.</strong></p>
-            
             <p>O aplicativo foi desenvolvido para atender comerciantes locais que precisam organizar o dia a dia da peixaria com mais eficiência, segurança e controle. A proposta é centralizar informações importantes como cadastro de clientes, contatos, vendas, dívidas, entradas e saídas financeiras, permitindo que o dono do negócio tenha uma visão mais clara do movimento da empresa. Com uma interface simples e funcional, o app facilita o gerenciamento de rotina sem depender de processos manuais ou planilhas dispersas.</p>
 
-            <h3>Principais Funcionalidades</h3>
+            <h2>Principais Funcionalidades</h2>
             <p>O aplicativo permite o cadastro de clientes com nome, telefone e informações complementares, além de oferecer controle sobre vendas, fiados, fornecedores, produtos e movimentações do estoque. O usuário pode registrar cargas, acompanhar pagamentos pendentes, organizar despesas, monitorar lucros estimados e manter histórico de operações de forma organizada. Também há suporte para notificações, compartilhamento de informações e abertura de links externos para comunicação mais rápida com clientes e parceiros. O fluxo de dados é integrado ao Firebase, que é utilizado para autenticação de usuários, sincronização de informações e organização dos dados por conta, garantindo mais praticidade e continuidade no uso do app.</p>
+        </div>
 
+        <!-- Conteúdo da Aba: Política de Privacidade -->
+        <div id="privacidade" class="tab-content">
             <h2>Política de Privacidade</h2>
             <p>Esta Política de Privacidade descreve como o aplicativo de gestão da peixaria coleta, usa e protege as informações dos usuários e clientes durante a utilização dos nossos serviços.</p>
 
             <h3>1. Informações que Coletamos</h3>
             <p>Para o funcionamento essencial do aplicativo (registro de vendas, clientes e controle financeiro/fiados), podemos coletar e armazenar os seguintes dados:</p>
             <ul>
-                <li><strong>Informações Pessoais:</strong> Nome, número de telefone e dados cadastrados para identificação de clientes ou registros locais.</li>
+                <li><strong>Informações Pessoais:</strong> Nome e número de telefone cadastrados para identificação de clientes ou registros locais.</li>
                 <li><strong>Dados Comerciais:</strong> Registros de transações, vendas, despesas, estoque e controle de créditos/fiados.</li>
             </ul>
 
